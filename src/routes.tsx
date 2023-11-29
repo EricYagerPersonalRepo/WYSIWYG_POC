@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import type { RouteObject } from 'react-router';
 import LoadingScreen from './Components/LoadingScreen';
+import { Home } from './Pages/Home';
 
 const Loadable = (Component: any) => (props: JSX.IntrinsicAttributes) =>
 (
@@ -28,7 +29,7 @@ const routes: RouteObject[] = [
   
     {
       path: '*',
-      element: <LoadingScreen text="element" />
+      element: <Home />
     },
   ];
   
